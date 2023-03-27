@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: inter;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+
+.dim {
+  background: rgba(0,0,0,0.3);
+}
+
+.container {
+    max-width: 968px;
+    margin: 3rem auto;
+}
+
+p {
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+}
+
+/* ============ NAV ============ */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+  color: hsl(236, 13%, 42%);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.nav-link:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.menu-btn, .close-btn {
+  display: none;
+}
+
+/* ================ SECTION ==================== */
+
+
+/* ================ SECTION LEFT ==================== */
+.web {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+picture {
+  display: block;
+}
+
+.web-img {
+  width: 100%;
+}
+
+.web-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.5rem 0;
+  gap: 3rem;
+}
+
+.web-info h1 {
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 3rem;
+  border: 1px solid hsl(5, 85%, 63%);
+  background: hsl(5, 85%, 63%);
+  color: white;
+  padding: 0.7rem 3rem;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: hsl(240, 100%, 5%);
+  border-color: hsl(240, 100%, 5%);
+}
+
+/* ================ SECTION RIGHT ==================== */
+
+.section-right {
+  background: hsl(240, 100%, 5%);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.section-right h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: hsl(35, 77%, 62%);
+}
+
+.new-details h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.new-details p {
+  padding: 1rem 0;
+}
+
+hr {
+  margin: 1.5rem 0;
+}
+
+/* ================ SECTION BOTTOM ==================== */
+
+.section-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.game-info {
+  display: flex;
+  gap: 1rem;
+  height: 125px;
+}
+
+.game-img {
+  width: 80px;
+  height: 105px;
+}
+
+.game-info h1 {
+  color: hsl(233, 8%, 79%);
+}
+
+.game-info h4 {
+  margin: 0.6rem 0;
+}
+
+.game-info h4:hover {
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .container {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+  
+/* For medium devices */
+@media screen and (max-width: 778px) {
+  .web {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    margin-top: 1rem;
+  }
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    height: 100vh;
+    width: 70%;
+    background-blend-mode: darken;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform ease-in-out 0.3s;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 100 #121212;
+  }
+
+  .show-menu {
+    transform: translateX(0);
+  }
+
+  .close-btn {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.5rem;
+  }
+
+  .nav-links {
+    margin: 7rem 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    color: #000;
+  }
+  
+  /* ================ SECTION LEFT ==================== */
+  
+  .web-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* ================ SECTION BOTTOM ==================== */
+
+  .section-bottom  {
+    grid-template-columns: 1fr;
+  }
+
+}
+  
+  /* For small devices */
+  @media screen and (max-width: 375px) {
+    .container {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+  /* ================ SECTION LEFT ==================== */
+    .web-info h1 {
+      font-size: 2.5rem;
+    }
+  }
