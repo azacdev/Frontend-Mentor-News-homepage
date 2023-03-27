@@ -155,6 +155,12 @@ hr {
   color: hsl(5, 85%, 63%);
 }
 
+.attribution {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
